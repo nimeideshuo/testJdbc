@@ -8,15 +8,16 @@ import java.sql.Statement;
 public class jdbcMain {
 
 	public static void main(String[] args) {
-		//注册驱动
+		// 注册驱动
 		String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-		String dbName = "test";//数据库名称
-		String userName = "sa";//用户名
-		String passwrod = "";//用户密码
-		//连接地址
+		String dbName = "test";// 数据库名称
+		String userName = "sa";// 用户名
+		String passwrod = "";// 用户密码
+		// 连接地址
 		String url = "jdbc:sqlserver://localhost:1433; DatabaseName=" + dbName;
-		//sql  语句
-		String sql = "select * from sz_user";
+		// sql 语句
+		// String sql = "select * from sz_user";
+		String sql = "INSERT INTO sz_user (id,name) VALUES('7','test7');";
 		Statement st;
 		try {
 			Class.forName(driver);
